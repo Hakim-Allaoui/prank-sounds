@@ -48,14 +48,10 @@ class _HomePageState extends State<HomePage> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8.0),
                           child: Stack(
-                            fit: StackFit.expand,
+                            fit: StackFit.loose,
                             children: [
-                              const Icon(
-                                Icons.flutter_dash,
-                                size: 25,
-                                color: Colors.black,
-                              ),
-                              Text(data.cover,
+                              Image.network(data.cover),
+                              Text(data.title,
                                   style: const TextStyle(
                                       fontSize: 18, color: Colors.black),
                                   textAlign: TextAlign.center)
