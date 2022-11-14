@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sounds/main.dart';
+import 'package:sounds/screens/splash.dart';
 
 class ErrorPage extends StatefulWidget {
   const ErrorPage({Key? key}) : super(key: key);

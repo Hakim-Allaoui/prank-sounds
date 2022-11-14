@@ -8,15 +8,17 @@ class DataModel {
   late final Ads ads;
   late final Config config;
 
-  DataModel.fromJson(Map<String, dynamic> json){
-    categories = List.from(json['categories']).map((e)=>Categories.fromJson(e)).toList();
+  DataModel.fromJson(Map<String, dynamic> json) {
+    categories = List.from(json['categories'])
+        .map((e) => Categories.fromJson(e))
+        .toList();
     ads = Ads.fromJson(json['ads']);
     config = Config.fromJson(json['config']);
   }
 
   Map<String, dynamic> toJson() {
     final _data = <String, dynamic>{};
-    _data['categories'] = categories.map((e)=>e.toJson()).toList();
+    _data['categories'] = categories.map((e) => e.toJson()).toList();
     _data['ads'] = ads.toJson();
     _data['config'] = config.toJson();
     return _data;
@@ -33,17 +35,17 @@ class Categories {
   late final String cover;
   late final List<Audios> audios;
 
-  Categories.fromJson(Map<String, dynamic> json){
+  Categories.fromJson(Map<String, dynamic> json) {
     title = json['title'];
     cover = json['cover'];
-    audios = List.from(json['audios']).map((e)=>Audios.fromJson(e)).toList();
+    audios = List.from(json['audios']).map((e) => Audios.fromJson(e)).toList();
   }
 
   Map<String, dynamic> toJson() {
     final _data = <String, dynamic>{};
     _data['title'] = title;
     _data['cover'] = cover;
-    _data['audios'] = audios.map((e)=>e.toJson()).toList();
+    _data['audios'] = audios.map((e) => e.toJson()).toList();
     return _data;
   }
 }
@@ -58,7 +60,7 @@ class Audios {
   late final String url;
   late final String cover;
 
-  Audios.fromJson(Map<String, dynamic> json){
+  Audios.fromJson(Map<String, dynamic> json) {
     title = json['title'];
     url = json['url'];
     cover = json['cover'];
@@ -81,7 +83,7 @@ class Ads {
   late final String adNetwork;
   late final Ids ids;
 
-  Ads.fromJson(Map<String, dynamic> json){
+  Ads.fromJson(Map<String, dynamic> json) {
     adNetwork = json['adNetwork'];
     ids = Ids.fromJson(json['ids']);
   }
@@ -112,7 +114,7 @@ class Ids {
   late final String mRecs;
   late final String appOpen;
 
-  Ids.fromJson(Map<String, dynamic> json){
+  Ids.fromJson(Map<String, dynamic> json) {
     appId = json['appId'];
     banners = json['banners'];
     inters = json['inters'];
@@ -152,7 +154,7 @@ class Config {
   late final String updateLink;
   late final bool approved;
 
-  Config.fromJson(Map<String, dynamic> json){
+  Config.fromJson(Map<String, dynamic> json) {
     currentAppVersion = json['currentAppVersion'];
     forceUpdate = json['forceUpdate'];
     title = json['title'];
