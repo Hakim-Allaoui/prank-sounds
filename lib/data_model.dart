@@ -4,13 +4,13 @@ class DataModel {
     required this.ads,
     required this.config,
   });
-  late final List<Categories> categories;
+  late final List<Category> categories;
   late final Ads ads;
   late final Config config;
 
   DataModel.fromJson(Map<String, dynamic> json) {
     categories = List.from(json['categories'])
-        .map((e) => Categories.fromJson(e))
+        .map((e) => Category.fromJson(e))
         .toList();
     ads = Ads.fromJson(json['ads']);
     config = Config.fromJson(json['config']);
@@ -25,20 +25,20 @@ class DataModel {
   }
 }
 
-class Categories {
-  Categories({
+class Category {
+  Category({
     required this.title,
     required this.cover,
     required this.audios,
   });
   late final String title;
   late final String cover;
-  late final List<Audios> audios;
+  late final List<Audio> audios;
 
-  Categories.fromJson(Map<String, dynamic> json) {
+  Category.fromJson(Map<String, dynamic> json) {
     title = json['title'];
     cover = json['cover'];
-    audios = List.from(json['audios']).map((e) => Audios.fromJson(e)).toList();
+    audios = List.from(json['audios']).map((e) => Audio.fromJson(e)).toList();
   }
 
   Map<String, dynamic> toJson() {
@@ -50,8 +50,8 @@ class Categories {
   }
 }
 
-class Audios {
-  Audios({
+class Audio {
+  Audio({
     required this.title,
     required this.url,
     required this.cover,
@@ -60,7 +60,7 @@ class Audios {
   late final String url;
   late final String cover;
 
-  Audios.fromJson(Map<String, dynamic> json) {
+  Audio.fromJson(Map<String, dynamic> json) {
     title = json['title'];
     url = json['url'];
     cover = json['cover'];

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sounds/screens/splash.dart';
 
 class ErrorPage extends StatefulWidget {
@@ -21,22 +22,31 @@ class _ErrorPageState extends State<ErrorPage> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const SizedBox(
-                height: 100.0,
+              const Expanded(
+                flex: 2,
+                child: SizedBox(
+                  height: 100.0,
+                ),
               ),
-              const Icon(
-                Icons.error,
-                size: 150.0,
+              Expanded(
+                flex: 2,
+                child: SvgPicture.asset("assets/error.svg"),
               ),
-              MaterialButton(
-                height: 40.0,
-                onPressed: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (builder) {
-                    return const SplashPage();
-                  }));
-                },
-                child: const Text("Try again"),
+
+              Expanded(
+                flex: 2,
+                child: Center(
+                  child: MaterialButton(
+                    height: 40.0,
+                    onPressed: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (builder) {
+                            return const SplashPage();
+                          }));
+                    },
+                    child: const Text("Try again", style: TextStyle(color: Colors.white),),
+                  ),
+                ),
               ),
             ],
           ),

@@ -22,12 +22,13 @@ class S {
     dividerTheme: const DividerThemeData(indent: 10.0, endIndent: 10.0, color: Color(0xffB0B4B7)),
   );
 
-  static ThemeData darkTheme = ThemeData(
-    // fontFamily: 'Poppins',
+  static ThemeData darkTheme = ThemeData.dark().copyWith(
+    textTheme: ThemeData.dark().textTheme.copyWith().apply(
+      fontFamily: "Bangers",
+    ),
     scaffoldBackgroundColor: S.colors.scaffoldBackgroundDark,
     appBarTheme: AppBarTheme(backgroundColor: S.colors.dark),
     textButtonTheme: const TextButtonThemeData(),
-    textTheme: ThemeData.dark().textTheme.copyWith(),
     dividerTheme: const DividerThemeData(indent: 10.0, endIndent: 10.0),
     inputDecorationTheme: const InputDecorationTheme(
       border: OutlineInputBorder(),

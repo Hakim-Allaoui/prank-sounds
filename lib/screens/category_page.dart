@@ -2,17 +2,20 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sounds/screens/category_page.dart';
+import 'package:sounds/data_model.dart';
+import 'package:sounds/screens/audio_page.dart';
 import 'package:sounds/tools.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class CategoryPage extends StatefulWidget {
+  final Category category;
+
+  const CategoryPage({Key? key, required this.category}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<CategoryPage> createState() => _CategoryPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _CategoryPageState extends State<CategoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,18 +67,22 @@ class _HomePageState extends State<HomePage> {
                     mainAxisSpacing: 30,
                     physics: const BouncingScrollPhysics(),
                     padding: const EdgeInsets.all(20.0),
-                    children: Tools.allData.categories
+                    children: widget.category.audios
                         .map(
-                          (data) => ClipRRect(
+                          (audio) => ClipRRect(
                             borderRadius: BorderRadius.circular(20.0),
                             child: GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (builder) => CategoryPage(category: data)));
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (builder) =>
+                                            AudioPage(audio: audio)));
                               },
                               child: Container(
-                                color: Tools.mColors[int.parse(Tools
-                                        .allData.categories
-                                        .indexOf(data)
+                                color: Tools.mColors[int.parse(widget
+                                        .category.audios
+                                        .indexOf(audio)
                                         .toString()
                                         .split('')
                                         .last)]
@@ -86,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                                     fit: StackFit.expand,
                                     children: [
                                       Image.network(
-                                        data.cover,
+                                        audio.cover,
                                         fit: BoxFit.cover,
                                       ),
                                       Align(
@@ -96,15 +103,14 @@ class _HomePageState extends State<HomePage> {
                                               vertical: 8.0),
                                           width: double.infinity,
                                           decoration: BoxDecoration(
-                                            color: Tools.mColors[int.parse(Tools
-                                                    .allData.categories
-                                                    .indexOf(data)
+                                            color: Tools.mColors[int.parse(widget.category.audios
+                                                    .indexOf(audio)
                                                     .toString()
                                                     .split('')
                                                     .last)]
                                                 .withOpacity(0.9),
                                           ),
-                                          child: Text(data.title,
+                                          child: Text(audio.title,
                                               style: const TextStyle(
                                                 fontSize: 18,
                                               ),

@@ -63,7 +63,7 @@ class _SplashPageState extends State<SplashPage> {
                       duration: const Duration(milliseconds: 5000),
                       child: Text(state,
                           style: const TextStyle(
-                              color: Colors.white, fontSize: 20.0))),
+                              color: Colors.white, fontSize: 40.0))),
                   const SizedBox(
                     height: 50.0,
                   ),

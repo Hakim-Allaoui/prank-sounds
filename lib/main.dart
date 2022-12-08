@@ -14,7 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Prank Sounds',
       debugShowCheckedModeBanner: false,
-      theme: S.darkTheme,
+      theme: S.darkTheme.copyWith(
+        textTheme: S.darkTheme.textTheme.copyWith(),
+      ),
       themeMode: ThemeMode.dark,
       home: const SplashPage(),
     );
