@@ -10,7 +10,7 @@ class Tools {
   static Future<dynamic> getData() async {
     var res = await http.get(
         Uri.parse(
-            "https://raw.githubusercontent.com/Hakim-Allaoui/prank-sounds/425f0991bfd6feea2ece6705c7f3b19e70586a81/lib/data.json?token=GHSAT0AAAAAAB3S6YYTGADRZLUKK5BABAF4Y4V2XWQ"),
+            "https://raw.githubusercontent.com/Hakim-Allaoui/prank-sounds/837348c0b6f957a2dc7772d5b2c233ce61c2a76d/lib/data.json?token=GHSAT0AAAAAAB3S6YYS3JAICFBSWWMNOS3AY4WE2GA"),
         headers: {"Accept": "application/json"});
     print("Data:\n${res.body}");
     if (res.statusCode == 200) {
@@ -59,7 +59,6 @@ class Tools {
   static var logger = Logger(
     printer: PrettyPrinter(methodCount: 2, colors: true, printEmojis: true),
   );
-
 
   static List<Color> mColors = [
     const Color(0xfff94144),

@@ -21,8 +21,8 @@
   },
   "categories": [
     {
-      "title": "PRANK SOUNDS",
-      "cover": "https://cdn-icons-png.flaticon.com/512/1384/1384688.png",
+      "title": "MEMES SOUNDS",
+      "cover": "https://archive.org/download/FamousCharactersTrollFaceOkayMemeFace139927/Famous-characters-Troll-face-Okay-meme-face-139927.png",
       "audios": [
         {"title": "You look like a 'hhh'", "url": "https://github.com/Amegodev/amegodev.github.io/raw/master/api/Online%20Audio%20Player/You%20look%20like%20a%20uhhhh.mp3", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/4280ed3f-ecbf-4654-b967-32fee28da673-small.png"},
         {"title": "Fuck This Shit I' Ou'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/d6696188-c3bd-4c1e-aa7f-495c06932d30-small.jpg"},
@@ -37,20 +37,27 @@
       ]
     },
     {
-      "title": "MEMES SOUNDS",
-      "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/4280ed3f-ecbf-4654-b967-32fee28da673-small.png",
+      "title": "PRANK SOUNDS",
+      "cover": "https://cdn-icons-png.flaticon.com/512/1384/1384688.png",
       "audios": [
         {"title": "You look like a 'hhh'", "url": "https://github.com/Amegodev/amegodev.github.io/raw/master/api/Online%20Audio%20Player/You%20look%20like%20a%20uhhhh.mp3", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/4280ed3f-ecbf-4654-b967-32fee28da673-small.png"},
-        {"title": "Fuck This Shit I' Ou'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/d6696188-c3bd-4c1e-aa7f-495c06932d30-small.jpg"},
-        {"title": "FBI OPEN UP! (Sound Effect'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/9261dbf0-f29c-4992-8545-23bfd80aceab-small.png"},
-        {"title": "Omg they were roommates - Dank'mem'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/e5060505-3c01-4d50-a18e-be50fed513d2-small.jpeg"},
-        {"title": "Ka'oom'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/51d40745-6e3b-411e-a762-acc1a5dbdfcc-small.jpeg"},
-        {"title": "JonTron 'WTF'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/4498306b-506e-43ea-9ffd-f761d12cd729-small.png"},
-        {"title": "Simba - TikTok Sound E'fec'", "url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"},
-        {"title": "Run (meme 'ong'", "url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"},
-        {"title": "My name is'Jef'", "url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"},
-        {"title": "No God Pleas' No'", "url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"}
+        {"title": "Fuck This Shit I' Ou'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/d6696188-c3bd-4c1e-aa7f-495c06932d30-small.jpg"}
       ]
+    },
+    {
+      "title": "HUMAN SOUNDS",
+      "cover": "https://cdn.videvo.net/videvo_files/audio/premium/audio0116/thumbnails/HumanScream%20IN13_73_new_design2.png",
+      "audios": []
+    },
+    {
+      "title": "MACHINE SOUND",
+      "cover": "https://cdn-andiswebcontent.azureedge.net/production/images_and_docs/product/60130-easyclip-versa-blue-clipper-kit-racd-angle.png",
+      "audios": []
+    },
+    {
+      "title": "OTHER SOUND",
+      "cover": "http://cdn.onlinewebfonts.com/svg/img_228274.png",
+      "audios": []
     }
   ]
 }

@@ -1,8 +1,8 @@
 import 'dart:math';
 
-import 'package:fake_it/utils/tools.dart';
 import 'package:flutter/material.dart';
 import 'package:applovin_max/applovin_max.dart';
+import 'package:sounds/tools.dart';
 
 class ApplovinAdNetwork {
   bool isRewardedVideoAvailable = false;
@@ -68,15 +68,7 @@ class ApplovinAdNetwork {
     required BuildContext context,
     required String id,
     required VoidCallback onFinished,
-    int? frequency,
   }) async {
-    int num = Tools.getRandomInt(maxNumber: frequency ?? 0);
-    Tools.logger.i("frequency result: $num");
-    if (num != 0) {
-      onFinished();
-      return;
-    }
-
     Future.delayed(const Duration(seconds: 30), () {
       Navigator.pop(context);
       onFinished();

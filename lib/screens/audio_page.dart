@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sounds/data_model.dart';
 import 'package:assets_audio_player/assets_audio_player.dart' as AudioPlayer;
 import 'package:switcher/core/switcher_size.dart';
@@ -64,8 +65,7 @@ class _AudioPageState extends State<AudioPage> {
               children: [
                 SizedBox(
                   height: 100.0,
-                  child:
-                  Row(
+                  child: Row(
                     children: [
                       const BackButton(),
                       Expanded(
@@ -77,7 +77,9 @@ class _AudioPageState extends State<AudioPage> {
                           ),
                         ),
                       ),
-                      IconButton(onPressed: () {}, icon: const Icon(Icons.favorite_border)),
+                      IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.favorite_border)),
                     ],
                   ),
                 ),
@@ -129,7 +131,8 @@ class _AudioPageState extends State<AudioPage> {
                             ),
                             Row(
                               children: [
-                                const Text("LOOP: ",
+                                const Text(
+                                  "LOOP: ",
                                   style: TextStyle(fontSize: 20.0),
                                 ),
                                 const SizedBox(
@@ -139,7 +142,8 @@ class _AudioPageState extends State<AudioPage> {
                                   value: true,
                                   size: SwitcherSize.large,
                                   switcherButtonRadius: 50,
-                                  colorOff: Colors.purple[300]!.withOpacity(0.3),
+                                  colorOff:
+                                      Colors.purple[300]!.withOpacity(0.3),
                                   colorOn: Colors.purple[300]!,
                                   onChanged: (bool state) {
                                     //
@@ -172,39 +176,45 @@ class _AudioPageState extends State<AudioPage> {
                           ),
                         ),
                       ),
-                      Row(
-                        children: [
-                          IconButton(
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          children: [
+                            IconButton(
                               onPressed: () {
                                 if (volume > 20) volume -= 20;
                                 setState(() {});
                               },
-                              icon: const Icon(Icons.volume_down)),
-                          Expanded(
-                            child: SliderTheme(
-                              data: SliderTheme.of(context).copyWith(
-                                trackHeight: 25.0,
-                                inactiveTrackColor: Colors.white,
-                                thumbColor: Colors.black38,
-                              ),
-                              child: Slider(
-                                value: volume,
-                                min: 0,
-                                max: 100,
-                                divisions: 4,
-                                onChanged: (double value) {
-                                  setState(() {});
-                                },
+                              icon: const FaIcon(FontAwesomeIcons.volumeLow),
+                            ),
+                            Expanded(
+                              child: SliderTheme(
+                                data: SliderTheme.of(context).copyWith(
+                                  trackHeight: 25.0,
+                                  activeTrackColor: Colors.purple[300],
+                                  inactiveTrackColor: Colors.white,
+                                  thumbColor: Colors.black38,
+                                ),
+                                child: Slider(
+                                  value: volume,
+                                  min: 0,
+                                  max: 100,
+                                  divisions: 4,
+                                  onChanged: (double value) {
+                                    setState(() {});
+                                  },
+                                ),
                               ),
                             ),
-                          ),
-                          IconButton(
+                            IconButton(
                               onPressed: () {
                                 if (volume < 80) volume += 20;
                                 setState(() {});
                               },
-                              icon: const Icon(Icons.volume_up)),
-                        ],
+                              icon: const FaIcon(FontAwesomeIcons.volumeHigh),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
