@@ -9,7 +9,7 @@ class Tools {
   static Future<dynamic> getData() async {
     var res = await http.get(
         Uri.parse(
-            "https://raw.githubusercontent.com/Amegodev/amegodev.github.io/master/api/Online%20Audio%20Player/data.json"),
+            "https://raw.githubusercontent.com/Hakim-Allaoui/prank-sounds/master/lib/data.json?token=GHSAT0AAAAAAB3S6YYTWE6HSVOINAFQSCJYY4V2R3A"),
         headers: {"Accept": "application/json"});
     print("Data:\n${res.body}");
     if (res.statusCode == 200) {

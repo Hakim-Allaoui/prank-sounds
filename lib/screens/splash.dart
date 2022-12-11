@@ -27,7 +27,7 @@ class _SplashPageState extends State<SplashPage> {
       body: FutureBuilder(
           future: Tools.getData(),
           builder: (context, snapshot) {
-            Tools.allData = DataModel.fromJson(jsonDecode('''{
+            /*Tools.allData = DataModel.fromJson(jsonDecode('''{
             "ads": {
             "adNetwork": "admob",
             "ids": {
@@ -85,14 +85,14 @@ class _SplashPageState extends State<SplashPage> {
             {"title": "Category 19", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/9261dbf0-f29c-4992-8545-23bfd80aceab-small.png", "audios": [{"title": "Title 1","url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"}, {"title": "Title 2","url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"}]},
                 {"title": "Category 20", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/9261dbf0-f29c-4992-8545-23bfd80aceab-small.png", "audios": [{"title": "Title 1","url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"}, {"title": "Title 2","url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"}]}
                 ]
-            }'''));
+            }'''));*/
 
-            Future.delayed(const Duration(seconds: 2), () {
+            /*Future.delayed(const Duration(seconds: 2), () {
               Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (builder) {
                     return const HomePage();
                   }));
-            });
+            });*/
 
             if (snapshot.connectionState == ConnectionState.done) {
               if (snapshot.data != null) {
