@@ -138,8 +138,7 @@ class _CategoryPageState extends State<CategoryPage> {
                                           ),
                                           child: Text(audio.title,
                                               style: const TextStyle(
-                                                fontSize: 12,
-                                                color: Colors.black
+                                                fontSize: 16,
                                               ),
                                               textAlign: TextAlign.center),
                                         ),

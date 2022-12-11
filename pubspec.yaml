@@ -44,6 +44,15 @@ dependencies:
 
   font_awesome_flutter: ^10.3.0
 
+  logger: ^1.1.0
+
+  #Monetization:
+  # flutter_applovin_max: ^2.1.1
+  google_mobile_ads: ^2.3.0
+  applovin_max: ^2.3.2
+  facebook_audience_network: ^1.0.1
+  unity_ads_plugin: ^0.3.7
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

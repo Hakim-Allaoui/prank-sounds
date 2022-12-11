@@ -4,14 +4,14 @@ class DataModel {
     required this.ads,
     required this.config,
   });
+
   late final List<Category> categories;
   late final Ads ads;
   late final Config config;
 
   DataModel.fromJson(Map<String, dynamic> json) {
-    categories = List.from(json['categories'])
-        .map((e) => Category.fromJson(e))
-        .toList();
+    categories =
+        List.from(json['categories']).map((e) => Category.fromJson(e)).toList();
     ads = Ads.fromJson(json['ads']);
     config = Config.fromJson(json['config']);
   }
@@ -31,6 +31,7 @@ class Category {
     required this.cover,
     required this.audios,
   });
+
   late final String title;
   late final String cover;
   late final List<Audio> audios;
@@ -56,6 +57,7 @@ class Audio {
     required this.url,
     required this.cover,
   });
+
   late final String title;
   late final String url;
   late final String cover;
@@ -80,6 +82,7 @@ class Ads {
     required this.adNetwork,
     required this.ids,
   });
+
   late final String adNetwork;
   late final Ids ids;
 
@@ -99,39 +102,40 @@ class Ads {
 class Ids {
   Ids({
     required this.appId,
-    required this.banners,
-    required this.inters,
-    required this.rewards,
-    required this.natives,
-    required this.mRecs,
+    required this.banner,
+    required this.inter,
+    required this.reward,
+    required this.native,
+    required this.mRec,
     required this.appOpen,
   });
+
   late final String appId;
-  late final String banners;
-  late final String inters;
-  late final String rewards;
-  late final String natives;
-  late final String mRecs;
+  late final String banner;
+  late final String inter;
+  late final String reward;
+  late final String native;
+  late final String mRec;
   late final String appOpen;
 
   Ids.fromJson(Map<String, dynamic> json) {
     appId = json['appId'];
-    banners = json['banners'];
-    inters = json['inters'];
-    rewards = json['rewards'];
-    natives = json['natives'];
-    mRecs = json['mRecs'];
+    banner = json['banner'];
+    inter = json['inter'];
+    reward = json['reward'];
+    native = json['native'];
+    mRec = json['mRec'];
     appOpen = json['appOpen'];
   }
 
   Map<String, dynamic> toJson() {
     final _data = <String, dynamic>{};
     _data['appId'] = appId;
-    _data['banners'] = banners;
-    _data['inters'] = inters;
-    _data['rewards'] = rewards;
-    _data['natives'] = natives;
-    _data['mRecs'] = mRecs;
+    _data['banner'] = banner;
+    _data['inter'] = inter;
+    _data['reward'] = reward;
+    _data['native'] = native;
+    _data['mRec'] = mRec;
     _data['appOpen'] = appOpen;
     return _data;
   }

@@ -128,8 +128,8 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: Text(data.title,
                                               style: const TextStyle(
-                                                  fontSize: 12,
-                                                  color: Colors.black),
+                                                  fontSize: 16,
+                                              ),
                                               textAlign: TextAlign.center),
                                         ),
                                       )
