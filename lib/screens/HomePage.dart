@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> {
             Column(
               children: [
                 const SizedBox(
-                  height: 100.0,
+                  height: 80.0,
                   child: Center(
                     child: Text(
                       "Sounds",
@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                 Expanded(
                   child: GridView.count(
                     crossAxisCount: 2,
-                    childAspectRatio: (2 / 2),
+                    childAspectRatio: (2 / 2.5),
                     crossAxisSpacing: 30,
                     mainAxisSpacing: 30,
                     physics: const BouncingScrollPhysics(),
@@ -70,24 +70,46 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.circular(20.0),
                             child: GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (builder) => CategoryPage(category: data)));
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (builder) =>
+                                            CategoryPage(category: data)));
                               },
                               child: Container(
-                                color: Tools.mColors[int.parse(Tools
-                                        .allData.categories
-                                        .indexOf(data)
-                                        .toString()
-                                        .split('')
-                                        .last)]
-                                    .withOpacity(0.5),
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                      colors: [
+                                        Tools.mColors[int.parse(Tools
+                                                .allData.categories
+                                                .indexOf(data)
+                                                .toString()
+                                                .split('')
+                                                .last)]
+                                            .withOpacity(0.5),
+                                        Tools.mColors[int.parse(Tools
+                                            .allData.categories
+                                            .indexOf(data)
+                                            .toString()
+                                            .split('')
+                                            .last)],
+                                      ],
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter),
+                                ),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10.0),
                                   child: Stack(
                                     fit: StackFit.expand,
                                     children: [
-                                      Image.network(
-                                        data.cover,
-                                        fit: BoxFit.cover,
+                                      Center(
+                                        child: FadeInImage(
+                                          height: 80.0,
+                                          image: NetworkImage(data.cover),
+                                          fit: BoxFit.cover,
+                                          placeholder: const AssetImage(
+                                              'assets/loading.gif'),
+                                        ),
                                       ),
                                       Align(
                                         alignment: Alignment.bottomCenter,
@@ -106,7 +128,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: Text(data.title,
                                               style: const TextStyle(
-                                                fontSize: 18,
+                                                  fontSize: 16,
                                               ),
                                               textAlign: TextAlign.center),
                                         ),

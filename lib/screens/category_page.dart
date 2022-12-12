@@ -47,22 +47,28 @@ class _CategoryPageState extends State<CategoryPage> {
             ),
             Column(
               children: [
-                const SizedBox(
-                  height: 100.0,
-                  child: Center(
-                    child: Text(
-                      "Sounds",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 30.0,
+                SizedBox(
+                  height: 80.0,
+                  child: Row(
+                    children: [
+                      const BackButton(),
+                      Expanded(
+                        child: Text(
+                          widget.category.title,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            fontSize: 30.0,
+                          ),
+                        ),
                       ),
-                    ),
+                      IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
+                    ],
                   ),
                 ),
                 Expanded(
                   child: GridView.count(
                     crossAxisCount: 2,
-                    childAspectRatio: (2 / 2),
+                    childAspectRatio: (2 / 2.5),
                     crossAxisSpacing: 30,
                     mainAxisSpacing: 30,
                     physics: const BouncingScrollPhysics(),
@@ -80,21 +86,40 @@ class _CategoryPageState extends State<CategoryPage> {
                                             AudioPage(audio: audio)));
                               },
                               child: Container(
-                                color: Tools.mColors[int.parse(widget
-                                        .category.audios
-                                        .indexOf(audio)
-                                        .toString()
-                                        .split('')
-                                        .last)]
-                                    .withOpacity(0.5),
+
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                      colors: [
+                                        Tools.mColors[int.parse(widget
+                                            .category.audios
+                                            .indexOf(audio)
+                                            .toString()
+                                            .split('')
+                                            .last)].withOpacity(0.5),
+                                        Tools.mColors[int.parse(widget
+                                            .category.audios
+                                            .indexOf(audio)
+                                            .toString()
+                                            .split('')
+                                            .last)],
+                                      ],
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter
+                                  ),
+                                ),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10.0),
                                   child: Stack(
                                     fit: StackFit.expand,
                                     children: [
-                                      Image.network(
-                                        audio.cover,
-                                        fit: BoxFit.cover,
+                                      Center(
+                                        child: FadeInImage(
+                                          height: 60.0,
+                                          image: NetworkImage(audio.cover),
+                                          fit: BoxFit.cover,
+                                          placeholder: const AssetImage(
+                                              'assets/loading.gif'),
+                                        ),
                                       ),
                                       Align(
                                         alignment: Alignment.bottomCenter,
@@ -103,16 +128,17 @@ class _CategoryPageState extends State<CategoryPage> {
                                               vertical: 8.0),
                                           width: double.infinity,
                                           decoration: BoxDecoration(
-                                            color: Tools.mColors[int.parse(widget.category.audios
-                                                    .indexOf(audio)
-                                                    .toString()
-                                                    .split('')
-                                                    .last)]
+                                            color: Tools.mColors[int.parse(
+                                                    widget.category.audios
+                                                        .indexOf(audio)
+                                                        .toString()
+                                                        .split('')
+                                                        .last)]
                                                 .withOpacity(0.9),
                                           ),
                                           child: Text(audio.title,
                                               style: const TextStyle(
-                                                fontSize: 18,
+                                                fontSize: 16,
                                               ),
                                               textAlign: TextAlign.center),
                                         ),
