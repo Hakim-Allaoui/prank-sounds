@@ -49,9 +49,15 @@ class AdsHelper {
   Widget getBannerAd() {
     switch (adNetwork) {
       case "admob":
-        return admob.getBanner(banner);
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          child: admob.getBanner(banner),
+        );
       case "applovin":
-        return applovin.getBanner(banner);
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          child: applovin.getBanner(banner),
+        );
       case "unity":
         return const SizedBox();
       case "facebook":

@@ -62,6 +62,8 @@ class _AudioPageState extends State<AudioPage> {
   void initState() {
     super.initState();
 
+    ads.loadInter();
+
     assetsAudioPlayer.playlistAudioFinished.listen((Playing playing) {
       if (loop) playAudio();
     });
@@ -112,6 +114,7 @@ class _AudioPageState extends State<AudioPage> {
                       children: [
                         BackButton(
                           onPressed: () async {
+                            ads.showInter();
                             await assetsAudioPlayer.stop();
                             await assetsAudioPlayer.dispose();
 
