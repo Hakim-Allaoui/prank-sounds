@@ -1,5 +1,5 @@
 {
-  "ads": {
+  "ads2": {
     "adNetwork": "applovin",
     "ids": {
       "appId": "2215451331176801",
@@ -11,7 +11,7 @@
       "appOpen": "ca-app-pub-3940256099942544/3419835294"
     }
   },
-  "ads2": {
+  "ads": {
     "adNetwork": "admob",
     "ids": {
       "appId": "ca-app-pub-3940256099942544~3347511713",
@@ -36,7 +36,7 @@
       "title": "MEMES SOUNDS",
       "cover": "https://archive.org/download/FamousCharactersTrollFaceOkayMemeFace139927/Famous-characters-Troll-face-Okay-meme-face-139927.png",
       "audios": [
-        {"title": "You look like a 'hhh'", "url": "https://github.com/Amegodev/amegodev.github.io/raw/master/api/Online%20Audio%20Player/You%20look%20like%20a%20uhhhh.mp3", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/4280ed3f-ecbf-4654-b967-32fee28da673-small.png"},
+        {"title": "oh no no no laugh", "url": "https://www.myinstants.com/media/sounds/oh-no-no-no-no-laugh.mp3", "cover": "https://images.app.goo.gl/P5suaqmKNXD4TiKU6"},
         {"title": "Fuck This Shit I' Ou'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/d6696188-c3bd-4c1e-aa7f-495c06932d30-small.jpg"},
         {"title": "FBI OPEN UP! (Sound Effect'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/9261dbf0-f29c-4992-8545-23bfd80aceab-small.png"},
         {"title": "Omg they were roommates - Dank'mem'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/e5060505-3c01-4d50-a18e-be50fed513d2-small.jpeg"},
