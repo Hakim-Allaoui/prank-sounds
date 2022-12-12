@@ -1,5 +1,17 @@
 {
   "ads": {
+    "adNetwork": "applovin",
+    "ids": {
+      "appId": "2215451331176801",
+      "banner": "98095d8b4ef0b64c",
+      "inter": "ca-app-pub-3940256099942544/1033173712",
+      "reward": "ca-app-pub-3940256099942544/5224354917",
+      "native": "ca-app-pub-5345037485983429/4729397518",
+      "mRec": "/6499/example/rewarded",
+      "appOpen": "ca-app-pub-3940256099942544/3419835294"
+    }
+  },
+  "ads2": {
     "adNetwork": "admob",
     "ids": {
       "appId": "ca-app-pub-3940256099942544~3347511713",

@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sounds/screens/category_page.dart';
+import 'package:sounds/services/ads.dart';
 import 'package:sounds/tools.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,6 +14,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  AdsHelper ads = AdsHelper();
+
+  @override
+  void initState() {
+    super.initState();
+    ads.loadInter();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,6 +79,7 @@ class _HomePageState extends State<HomePage> {
                             borderRadius: BorderRadius.circular(20.0),
                             child: GestureDetector(
                               onTap: () {
+                                ads.showInter();
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
@@ -143,6 +153,7 @@ class _HomePageState extends State<HomePage> {
                         .toList(),
                   ),
                 ),
+                ads.getBannerAd(),
               ],
             ),
           ],

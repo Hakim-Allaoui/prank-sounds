@@ -20,6 +20,13 @@ class _CategoryPageState extends State<CategoryPage> {
   AdsHelper ads = AdsHelper();
 
 
+
+  @override
+  void initState() {
+    super.initState();
+    ads.loadInter();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,6 +90,7 @@ class _CategoryPageState extends State<CategoryPage> {
                             borderRadius: BorderRadius.circular(20.0),
                             child: GestureDetector(
                               onTap: () {
+                                ads.showInter();
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(

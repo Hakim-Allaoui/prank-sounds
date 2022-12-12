@@ -9,6 +9,8 @@ class AdmobHelper {
 
   static init() async {
     await MobileAds.instance.initialize();
+    MobileAds.instance.updateRequestConfiguration(
+        RequestConfiguration(testDeviceIds: ['9FDC55AB3FEF997ABA9ED662FE75723A']));
   }
 
   Widget getBanner(String id) {
