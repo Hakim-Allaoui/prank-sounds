@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:sounds/data_model.dart';
 import 'package:sounds/screens/Error_page.dart';
 import 'package:sounds/screens/HomePage.dart';
+import 'package:sounds/services/ads.dart';
 import 'package:sounds/tools.dart';
 
 class SplashPage extends StatefulWidget {
@@ -96,8 +97,10 @@ class _SplashPageState extends State<SplashPage> {
 
             if (snapshot.connectionState == ConnectionState.done) {
               if (snapshot.data != null) {
-                print("Snapshot: ${snapshot.data}");
+                Tools.logger.i("Snapshot: ${snapshot.data}");
                 Tools.allData = DataModel.fromJson(snapshot.data);
+
+                AdsHelper.init();
 
                 //setState(() {
                 //  state = "ready";

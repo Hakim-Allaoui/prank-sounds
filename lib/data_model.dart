@@ -29,30 +29,30 @@ class Category {
   Category({
     required this.title,
     required this.cover,
-    required this.audios,
+    required this.myAudios,
   });
 
   late final String title;
   late final String cover;
-  late final List<Audio> audios;
+  late final List<AudioModel> myAudios;
 
   Category.fromJson(Map<String, dynamic> json) {
     title = json['title'];
     cover = json['cover'];
-    audios = List.from(json['audios']).map((e) => Audio.fromJson(e)).toList();
+    myAudios = List.from(json['audios']).map((e) => AudioModel.fromJson(e)).toList();
   }
 
   Map<String, dynamic> toJson() {
     final _data = <String, dynamic>{};
     _data['title'] = title;
     _data['cover'] = cover;
-    _data['audios'] = audios.map((e) => e.toJson()).toList();
+    _data['audios'] = myAudios.map((e) => e.toJson()).toList();
     return _data;
   }
 }
 
-class Audio {
-  Audio({
+class AudioModel {
+  AudioModel({
     required this.title,
     required this.url,
     required this.cover,
@@ -62,7 +62,7 @@ class Audio {
   late final String url;
   late final String cover;
 
-  Audio.fromJson(Map<String, dynamic> json) {
+  AudioModel.fromJson(Map<String, dynamic> json) {
     title = json['title'];
     url = json['url'];
     cover = json['cover'];

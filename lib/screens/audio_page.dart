@@ -1,16 +1,21 @@
 import 'dart:async';
 import 'dart:ui';
 
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sounds/data_model.dart';
 import 'package:assets_audio_player/assets_audio_player.dart' as AudioPlayer;
+import 'package:sounds/services/ads.dart';
+import 'package:sounds/tools.dart';
 import 'package:switcher/core/switcher_size.dart';
 import 'package:switcher/switcher.dart';
+import 'package:timer_count_down/timer_controller.dart';
+import 'package:timer_count_down/timer_count_down.dart';
 
 class AudioPage extends StatefulWidget {
-  final Audio audio;
+  final AudioModel audio;
 
   const AudioPage({Key? key, required this.audio}) : super(key: key);
 
@@ -20,6 +25,8 @@ class AudioPage extends StatefulWidget {
 
 class _AudioPageState extends State<AudioPage> {
   final assetsAudioPlayer = AudioPlayer.AssetsAudioPlayer();
+
+  AdsHelper ads = AdsHelper();
 
   double volume = 50.0;
 
@@ -37,7 +44,9 @@ class _AudioPageState extends State<AudioPage> {
     "5 minutes",
   ];
 
-  String counting = "";
+  String countDown = "";
+
+  final CountdownController countdownController = CountdownController();
 
   List<int> timerValues = [
     0,
@@ -48,6 +57,15 @@ class _AudioPageState extends State<AudioPage> {
     60,
     300,
   ];
+
+  @override
+  void initState() {
+    super.initState();
+
+    assetsAudioPlayer.playlistAudioFinished.listen((Playing playing) {
+      if (loop) playAudio();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -190,42 +208,24 @@ class _AudioPageState extends State<AudioPage> {
                             ],
                           ),
                         ),
-                        SizedBox(height: 50),
-                        Text(counting),
+                        const SizedBox(height: 50),
+                        Countdown(
+                          controller: countdownController,
+                          seconds: timerValues[
+                              timerItems.indexOf(timerSelectedItem)],
+                          build: (BuildContext context, double time) {
+                            return time == 0 ? const SizedBox() : Text(
+                              "Countdown\n${time.toInt().toString()}",
+                              style: const TextStyle(fontSize: 20.0),
+                              textAlign: TextAlign.center,
+                            );
+                          },
+                          onFinished: () {},
+                        ),
                         Expanded(
                           child: Center(
                             child: GestureDetector(
-                              onTap: () async {
-                                final bool playing =
-                                    assetsAudioPlayer.isPlaying.value;
-
-                                if (playing) {
-                                  await assetsAudioPlayer.stop();
-                                  return;
-                                }
-
-                                try {
-                                  Duration duration = Duration(
-                                      seconds: timerValues[timerItems
-                                          .indexOf(timerSelectedItem)]);
-
-                                  if (duration.inSeconds != 0) {
-                                    Timer.periodic(duration, (timer) async {
-                                      counting = timer.tick.toString();
-                                      setState(() {});
-                                    });
-                                  }
-
-                                  Future.delayed(duration, () async {
-                                    await assetsAudioPlayer.open(
-                                      AudioPlayer.Audio.network(
-                                          widget.audio.url),
-                                    );
-                                  });
-                                } catch (t) {
-                                  //mp3 unreachable
-                                }
-                              },
+                              onTap: playAudio,
                               child: FadeInImage(
                                 height: 60.0,
                                 image: NetworkImage(widget.audio.cover),
@@ -242,7 +242,10 @@ class _AudioPageState extends State<AudioPage> {
                             children: [
                               IconButton(
                                 onPressed: () {
-                                  if (volume > 20) volume -= 20;
+                                  if (volume > 20) {
+                                    volume -= 20;
+                                    assetsAudioPlayer.setVolume(0);
+                                  }
                                   setState(() {});
                                 },
                                 icon: const FaIcon(FontAwesomeIcons.volumeLow),
@@ -264,6 +267,7 @@ class _AudioPageState extends State<AudioPage> {
                                     divisions: 4,
                                     onChanged: (double value) {
                                       volume = value;
+                                      assetsAudioPlayer.setVolume(value / 100);
                                       setState(() {});
                                     },
                                   ),
@@ -271,7 +275,10 @@ class _AudioPageState extends State<AudioPage> {
                               ),
                               IconButton(
                                 onPressed: () {
-                                  if (volume <= 80) volume += 20;
+                                  if (volume <= 80) {
+                                    volume += 20;
+                                    assetsAudioPlayer.setVolume(1);
+                                  }
                                   setState(() {});
                                 },
                                 icon: const FaIcon(FontAwesomeIcons.volumeHigh),
@@ -285,6 +292,7 @@ class _AudioPageState extends State<AudioPage> {
                   const SizedBox(
                     height: 50.0,
                   ),
+                  ads.getBannerAd(),
                 ],
               ),
             ],
@@ -292,5 +300,32 @@ class _AudioPageState extends State<AudioPage> {
         ),
       ),
     );
+  }
+
+  playAudio() async {
+    final bool playing = assetsAudioPlayer.isPlaying.value;
+
+    if (playing) {
+      await assetsAudioPlayer.stop();
+      countdownController.pause();
+      return;
+    }
+
+    countdownController.start();
+
+    try {
+      Duration duration =
+          Duration(seconds: timerValues[timerItems.indexOf(timerSelectedItem)]);
+
+      Future.delayed(duration, () async {
+        countdownController.restart();
+        countdownController.pause();
+        await assetsAudioPlayer.open(
+          AudioPlayer.Audio.network(widget.audio.url),
+        );
+      });
+    } catch (t) {
+      //mp3 unreachable
+    }
   }
 }

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sounds/data_model.dart';
 import 'package:sounds/screens/audio_page.dart';
+import 'package:sounds/services/ads.dart';
 import 'package:sounds/tools.dart';
 
 class CategoryPage extends StatefulWidget {
@@ -16,6 +17,9 @@ class CategoryPage extends StatefulWidget {
 }
 
 class _CategoryPageState extends State<CategoryPage> {
+  AdsHelper ads = AdsHelper();
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,7 +77,7 @@ class _CategoryPageState extends State<CategoryPage> {
                     mainAxisSpacing: 30,
                     physics: const BouncingScrollPhysics(),
                     padding: const EdgeInsets.all(20.0),
-                    children: widget.category.audios
+                    children: widget.category.myAudios
                         .map(
                           (audio) => ClipRRect(
                             borderRadius: BorderRadius.circular(20.0),
@@ -91,13 +95,13 @@ class _CategoryPageState extends State<CategoryPage> {
                                   gradient: LinearGradient(
                                       colors: [
                                         Tools.mColors[int.parse(widget
-                                            .category.audios
+                                            .category.myAudios
                                             .indexOf(audio)
                                             .toString()
                                             .split('')
                                             .last)].withOpacity(0.5),
                                         Tools.mColors[int.parse(widget
-                                            .category.audios
+                                            .category.myAudios
                                             .indexOf(audio)
                                             .toString()
                                             .split('')
@@ -129,7 +133,7 @@ class _CategoryPageState extends State<CategoryPage> {
                                           width: double.infinity,
                                           decoration: BoxDecoration(
                                             color: Tools.mColors[int.parse(
-                                                    widget.category.audios
+                                                    widget.category.myAudios
                                                         .indexOf(audio)
                                                         .toString()
                                                         .split('')
@@ -153,6 +157,7 @@ class _CategoryPageState extends State<CategoryPage> {
                         .toList(),
                   ),
                 ),
+                ads.getBannerAd(),
               ],
             ),
           ],

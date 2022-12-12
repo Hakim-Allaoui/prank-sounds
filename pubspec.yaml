@@ -53,6 +53,8 @@ dependencies:
   facebook_audience_network: ^1.0.1
   unity_ads_plugin: ^0.3.7
 
+  timer_count_down: ^2.2.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
