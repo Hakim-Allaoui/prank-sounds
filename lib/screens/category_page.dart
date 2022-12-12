@@ -52,11 +52,11 @@ class _CategoryPageState extends State<CategoryPage> {
                   child: Row(
                     children: [
                       const BackButton(),
-                      const Expanded(
+                      Expanded(
                         child: Text(
-                          "Sounds",
+                          widget.category.title,
                           textAlign: TextAlign.center,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 30.0,
                           ),
                         ),

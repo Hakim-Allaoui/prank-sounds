@@ -10,7 +10,7 @@ class Tools {
   static Future<dynamic> getData() async {
     var res = await http.get(
         Uri.parse(
-            "https://raw.githubusercontent.com/Hakim-Allaoui/prank-sounds/837348c0b6f957a2dc7772d5b2c233ce61c2a76d/lib/data.json?token=GHSAT0AAAAAAB3S6YYS3JAICFBSWWMNOS3AY4WE2GA"),
+            "https://raw.githubusercontent.com/Hakim-Allaoui/prank-sounds/master/lib/data.json"),
         headers: {"Accept": "application/json"});
     print("Data:\n${res.body}");
     if (res.statusCode == 200) {
