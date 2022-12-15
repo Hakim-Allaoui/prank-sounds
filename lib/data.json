@@ -33,19 +33,11 @@
   },
   "categories": [
     {
-      "title": "MEMES SOUNDS",
-      "cover": "https://archive.org/download/FamousCharactersTrollFaceOkayMemeFace139927/Famous-characters-Troll-face-Okay-meme-face-139927.png",
+      "title": "Cats SOUNDS",
+      "cover": "https://excitedcats.com/wp-content/uploads/2021/02/hero.png",
       "audios": [
-        {"title": "oh no no no laugh", "url": "https://www.myinstants.com/media/sounds/oh-no-no-no-no-laugh.mp3", "cover": "https://i.pinimg.com/originals/28/2d/78/282d78e5575b04e58a767dceefedadd3.png"},
-        {"title": "Fuck This Shit I' Ou'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/d6696188-c3bd-4c1e-aa7f-495c06932d30-small.jpg"},
-        {"title": "FBI OPEN UP! (Sound Effect'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/9261dbf0-f29c-4992-8545-23bfd80aceab-small.png"},
-        {"title": "Omg they were roommates - Dank'mem'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/e5060505-3c01-4d50-a18e-be50fed513d2-small.jpeg"},
-        {"title": "Ka'oom'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/51d40745-6e3b-411e-a762-acc1a5dbdfcc-small.jpeg"},
-        {"title": "JonTron 'WTF'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/4498306b-506e-43ea-9ffd-f761d12cd729-small.png"},
-        {"title": "Simba - TikTok Sound E'fec'", "url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"},
-        {"title": "Run (meme 'ong'", "url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"},
-        {"title": "My name is'Jef'", "url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"},
-        {"title": "No God Pleas' No'", "url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"}
+        {"title": "cat", "url": "https://mobcup.net/ringtone/baby-cat-sound-s7taa28z/download/mp3", "cover": "https://static.vecteezy.com/system/resources/previews/002/047/536/original/cute-baby-cat-illustration-vector.jpg"},
+        {"title": "Cat Fight", "url": "https://mobcup.net/ringtone/cat-fight-puavjgt3/download/mp3", "cover": "https://cdn.shopify.com/s/files/1/0024/0408/9929/articles/shutterstock_1942906447.jpg"}
       ]
     },
     {
