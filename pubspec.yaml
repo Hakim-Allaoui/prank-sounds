@@ -41,9 +41,8 @@ dependencies:
   assets_audio_player: ^3.0.5
   flutter_svg: ^1.1.6
   switcher: ^1.0.0
-
   font_awesome_flutter: ^10.3.0
-
+  timer_count_down: ^2.2.1
   logger: ^1.1.0
 
   #Monetization:
@@ -53,7 +52,6 @@ dependencies:
   facebook_audience_network: ^1.0.1
   unity_ads_plugin: ^0.3.7
 
-  timer_count_down: ^2.2.1
 
 dev_dependencies:
   flutter_test:

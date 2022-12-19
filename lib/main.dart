@@ -3,7 +3,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:sounds/screens/splash.dart';
 import 'package:sounds/theme.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   MobileAds.instance.initialize();

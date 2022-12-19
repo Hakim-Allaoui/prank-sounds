@@ -1,5 +1,5 @@
 {
-  "ads": {
+  "ads2": {
     "adNetwork": "applovin",
     "ids": {
       "appId": "2215451331176801",
@@ -11,7 +11,7 @@
       "appOpen": "ca-app-pub-3940256099942544/3419835294"
     }
   },
-  "ads2": {
+  "ads": {
     "adNetwork": "admob",
     "ids": {
       "appId": "ca-app-pub-3940256099942544~3347511713",
@@ -33,27 +33,19 @@
   },
   "categories": [
     {
-      "title": "MEMES SOUNDS",
-      "cover": "https://archive.org/download/FamousCharactersTrollFaceOkayMemeFace139927/Famous-characters-Troll-face-Okay-meme-face-139927.png",
+      "title": "Cats SOUNDS",
+      "cover": "https://excitedcats.com/wp-content/uploads/2021/02/hero.png",
       "audios": [
-        {"title": "You look like a 'hhh'", "url": "https://github.com/Amegodev/amegodev.github.io/raw/master/api/Online%20Audio%20Player/You%20look%20like%20a%20uhhhh.mp3", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/4280ed3f-ecbf-4654-b967-32fee28da673-small.png"},
-        {"title": "Fuck This Shit I' Ou'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/d6696188-c3bd-4c1e-aa7f-495c06932d30-small.jpg"},
-        {"title": "FBI OPEN UP! (Sound Effect'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/9261dbf0-f29c-4992-8545-23bfd80aceab-small.png"},
-        {"title": "Omg they were roommates - Dank'mem'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/e5060505-3c01-4d50-a18e-be50fed513d2-small.jpeg"},
-        {"title": "Ka'oom'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/51d40745-6e3b-411e-a762-acc1a5dbdfcc-small.jpeg"},
-        {"title": "JonTron 'WTF'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/4498306b-506e-43ea-9ffd-f761d12cd729-small.png"},
-        {"title": "Simba - TikTok Sound E'fec'", "url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"},
-        {"title": "Run (meme 'ong'", "url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"},
-        {"title": "My name is'Jef'", "url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"},
-        {"title": "No God Pleas' No'", "url": "https://example.com", "cover": "https://files.voicy.network/public/Content/Custom/Logo_Wit.png"}
+        {"title": "cat", "url": "https://mobcup.net/ringtone/baby-cat-sound-s7taa28z/download/mp3", "cover": "https://static.vecteezy.com/system/resources/previews/002/047/536/original/cute-baby-cat-illustration-vector.jpg"},
+        {"title": "Cat Fight", "url": "https://mobcup.net/d/puavjgt3/mp3", "cover": "https://cdn.shopify.com/s/files/1/0024/0408/9929/articles/shutterstock_1942906447.jpg"}
       ]
     },
     {
-      "title": "PRANK SOUNDS",
-      "cover": "https://cdn-icons-png.flaticon.com/512/1384/1384688.png",
+      "title": " ANIMALS SOUNDS",
+      "cover": "https://www.ducksters.com/graphics/safari_duck.png",
       "audios": [
-        {"title": "You look like a 'hhh'", "url": "https://github.com/Amegodev/amegodev.github.io/raw/master/api/Online%20Audio%20Player/You%20look%20like%20a%20uhhhh.mp3", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/4280ed3f-ecbf-4654-b967-32fee28da673-small.png"},
-        {"title": "Fuck This Shit I' Ou'", "url": "https://example.com", "cover": "https://files.voicy.network/cdn-cgi/image/height=100,quality=85,format=auto/public/Content/Clips/Images/d6696188-c3bd-4c1e-aa7f-495c06932d30-small.jpg"}
+        {"title": "Leopard", "url": "https://freeanimalsounds.org/download/115/?tmstv=1671407841", "cover": "https://freeanimalsounds.org/wp-content/uploads/2017/08/leopard.jpg"},
+        {"title": "Elephant sound", "url": "blob:https://freeanimalsounds.org/753ef4de-9f51-4ff7-923b-2292e6d45b2d", "cover": "https://freeanimalsounds.org/wp-content/uploads/2017/08/Elefant.jpg"}
       ]
     },
     {
