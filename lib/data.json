@@ -38,13 +38,28 @@
       "audios": [
         {
           "title": "Triple Airhorn",
-          "url": "https://play-lh.googleusercontent.com/Ls9qr_Hl2ltkRffaR8kyWmYo_X0LMcW0F9SsDx2Tf6NCvSkCdu4pwHjbRKxlNFIIjA=rw",
-          "cover": ""
+          "url": "https://www.myinstants.com/media/sounds/mlg-airhorn.mp3",
+          "cover": "https://play-lh.googleusercontent.com/Ls9qr_Hl2ltkRffaR8kyWmYo_X0LMcW0F9SsDx2Tf6NCvSkCdu4pwHjbRKxlNFIIjA=rw"
         },
         {
-          "title": "Cat Fight",
-          "url": "https://mobcup.net/d/puavjgt3/mp3",
-          "cover": "https://cdn.shopify.com/s/files/1/0024/0408/9929/articles/shutterstock_1942906447.jpg"
+          "title": "Fart Sound 1",
+          "url": "https://www.soundjay.com/human/fart-01.mp3",
+          "cover": "https://play-lh.googleusercontent.com/MkP8kOlANGMSFB2cPmA53pUBUZMDm8RO_EQUTMi4cq88SXEAzdnNGHZ0WUVcZRmFVrw"
+        },
+        {
+          "title": "Hair Clipper",
+          "url": "https://soundspunos.com/index.php?do=download&id=3214",
+          "cover": "https://www.pngarts.com/files/1/Hair-Clippers-Free-PNG-Image.png"
+        },
+        {
+          "title": "oh no no no laugh",
+          "url": "https://www.myinstants.com/media/sounds/oh-no-no-no-no-laugh.mp3",
+          "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Bullet-red.png/480px-Bullet-red.png"
+        },
+        {
+          "title": "Pew",
+          "url": "https://www.myinstants.com/media/sounds/pew-pew-lame-sound-effect.mp3",
+          "cover": "https://www.pngarts.com/files/1/Hair-Clippers-Free-PNG-Image.png"
         }
       ]
     },
