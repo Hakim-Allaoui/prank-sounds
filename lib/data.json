@@ -1,3 +1,4 @@
+
 {
   "ads2": {
     "adNetwork": "applovin",
@@ -33,6 +34,32 @@
   },
   "categories": [
     {
+       "title": "Prank SOUNDS",
+      "cover": "https://i.pinimg.com/originals/a1/06/17/a10617fb26dee44b2a948adaad9140e1.png",
+      "audios": [
+        {
+          "title": "Air Horn",
+          "url": "https://mobcup.net/d/h6tchbr4/mp3",
+          "cover":"https://play-lh.googleusercontent.com/lwycHXU6aCim3_tCc4o4ZrlPOJBjiFtqruompfgEi_68guJrr0fpDygv3jQRtFf6JYM=w240-h480-rw"
+        },
+        {
+          "title": "Police Siren Prank",
+          "url": "https://mobcup.net/d/s9vysy29/mp3",
+          "cover": "https://play-lh.googleusercontent.com/Vb-8Z9FxRo1JrJ9VhdzHsn96tU5nKPSVUBjb9p6f29c3rvsOoYMTMSODhGgSVqJ4_Y8"
+        },
+        {
+          "title": "FNaF Scream ",
+          "url": "https://www.myinstants.com/media/sounds/foxys-scream-fnaf-ultimate-sound-effects.mp3",
+          "cover": "https://images.squarespace-cdn.com/content/v1/5616ac17e4b018d366f57f53/1624787491193-6P8EP4L2CLVFX5055Y6Q/256+LOGO+BLANK.png"
+        },
+        {
+          "title": "Ghost ",
+          "url": "https://mobcup.net/d/75qg23um/mp3",
+          "cover": "https://www.kindpng.com/picc/b/12-126193_creepy-hands-png.png"
+        }
+      ]
+    },
+    {
       "title": "Fart Prank",
       "cover": "https://play-lh.googleusercontent.com/E_7g2o3aTLunydMnYPTfndmsFErktBGzFPwwyZiWH7shuPNBfzkZCIvZheweJz0BLA=w600-h300-pc0xffffff-pd",
       "audios": [
@@ -49,22 +76,6 @@
       ]
     },
     {
-      "title": "Prank SOUNDS",
-      "cover": "https://i.pinimg.com/originals/a1/06/17/a10617fb26dee44b2a948adaad9140e1.png",
-      "audios": [
-        {
-          "title": "Air Horn",
-          "url": "https://mobcup.net/d/h6tchbr4/mp3",
-          "cover":"https://play-lh.googleusercontent.com/lwycHXU6aCim3_tCc4o4ZrlPOJBjiFtqruompfgEi_68guJrr0fpDygv3jQRtFf6JYM=w240-h480-rw"
-        },
-        {
-          "title": "Police Siren Prank",
-          "url": "https://mobcup.net/d/s9vysy29/mp3",
-          "cover": "https://play-lh.googleusercontent.com/Vb-8Z9FxRo1JrJ9VhdzHsn96tU5nKPSVUBjb9p6f29c3rvsOoYMTMSODhGgSVqJ4_Y8"
-        }
-      ]
-    },
-    {
       "title": " ANIMALS SOUNDS",
       "cover": "https://www.ducksters.com/graphics/safari_duck.png",
       "audios": [
@@ -73,17 +84,54 @@
           "url": "https://mobcup.net/d/e3inot89/mp3",
           "cover": "https://www.pngitem.com/pimgs/b/149-1495934_mosquito-png.png"
         },
+        
+         {
+          "title": "CAT MEOW",
+          "url": "https://mobcup.net/d/gl67mfj9/mp3",
+          "cover": "https://e7.pngegg.com/pngimages/273/154/png-clipart-cats-cats.png"
+        },
+        {
+          "title": "Dog",
+          "url": "https://mobcup.net/d/3k9ig958/mp3",
+          "cover": "https://assets.stickpng.com/images/580b57fbd9996e24bc43bbdf.png"
+        },
+        {
+          "title": "Donkey",
+          "url": "https://mobcup.net/d/oqujwjgy/mp3",
+          "cover": "https://www.freeiconspng.com/uploads/comic-donkey-face-png-image-8.png"
+        },
         {
           "title": "Elephant sound",
-          "url": "blob:https://freeanimalsounds.org/753ef4de-9f51-4ff7-923b-2292e6d45b2d",
+          "url": "https://mobcup.net/d/3l0hqf1g/mp3",
           "cover": "https://freeanimalsounds.org/wp-content/uploads/2017/08/Elefant.jpg"
         }
       ]
     },
     {
-      "title": "HUMAN SOUNDS",
+      "title": "Mêmes SOUNDS",
       "cover": "https://cdn.videvo.net/videvo_files/audio/premium/audio0116/thumbnails/HumanScream%20IN13_73_new_design2.png",
-      "audios": []
+      "audios": [
+        {
+          "title": "oh no! tiktok",
+          "url": "https://www.myinstants.com/media/sounds/oh-no_dwCYaSA.mp3",
+          "cover": "https://www.unicoizipline.com/wp-content/uploads/2017/02/UhOh-png-web.png"
+        },
+        {
+          "title": "Aw Shit! Here go again",
+          "url": "https://www.myinstants.com/media/sounds/gta-san-andreas-ah-shit-here-we-go-again_BWv0Gvc.mp3",
+          "cover": "https://miro.medium.com/max/1200/0*Zi9dr_E7XHoPvTk7"
+        },
+        {
+          "title": "HAha funny laugh",
+          "url": "https://www.myinstants.com/media/sounds/ny-video-online-audio-converter.mp3",
+          "cover": "https://media.tenor.com/images/3fd6aec32b95f8dd0093b39493854893/tenor.png"
+        },
+        {
+          "title": "Coffin Dance",
+          "url": "https://www.myinstants.com/media/sounds/y2mate-mp3cut_sRzY6rh.mp3",
+          "cover": "https://www.pngmart.com/files/12/Coffin-Dance-Meme-Transparent-PNG.png"
+        }
+      ]
     },
     {
       "title": "MACHINE SOUND",
